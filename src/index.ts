@@ -1,7 +1,6 @@
 export function initEyeOnIt(): void {
   let isFocused = false;
 
-  // 움직이는 point, 마우스 움직이는 영역, input, textarea
   const points: NodeListOf<Element> = document.querySelectorAll(".eye-point");
   const containers: NodeListOf<Element> =
     document.querySelectorAll(".eye-container");
@@ -16,7 +15,6 @@ export function initEyeOnIt(): void {
     point.classList.add("eye-point");
   });
 
-  // 이벤트 추가
   containers.forEach((el) => {
     el.addEventListener("mousemove", (e) => {
       if (!isFocused || el.classList.contains("always"))
@@ -48,7 +46,6 @@ export function initEyeOnIt(): void {
     });
   });
 
-  // point를 움직이는 함수, 부모 기준으로 동그란 모양까지만 움직임
   const movePoints = ({ x, y }: { x: number; y: number }) => {
     points.forEach((point) => {
       const pointParent = point.parentElement;
@@ -74,7 +71,6 @@ export function initEyeOnIt(): void {
     });
   };
 
-  // text 크기 확인을 위한 el들
   const layoutTrash = document.createElement("div");
   layoutTrash.className = "eye-layoutTrash";
   document.body.appendChild(layoutTrash);
@@ -88,7 +84,6 @@ export function initEyeOnIt(): void {
   layoutTrash.appendChild(inputSpan);
   layoutTrash.appendChild(textareaDiv);
 
-  // input text 크기 확인
   const getTextWidth = (text: string, input: HTMLElement) => {
     const style = window.getComputedStyle(input);
     inputSpan.style.font = style.font;
@@ -104,7 +99,6 @@ export function initEyeOnIt(): void {
     return { width };
   };
 
-  // textarea text 크기 확인
   const getTextareaSize = (text: string, textarea: HTMLElement) => {
     const style = window.getComputedStyle(textarea);
 
@@ -125,7 +119,6 @@ export function initEyeOnIt(): void {
     return { width, height };
   };
 
-  // 마우스 위치 계산
   let animationFrameId: number | null = null;
 
   const mouseCalc = (e: MouseEvent) => {
@@ -139,7 +132,6 @@ export function initEyeOnIt(): void {
     });
   };
 
-  // input 입력되고 있는 위치 계산
   const inputCalc = (el: HTMLElement, e: Event) => {
     const style = window.getComputedStyle(el);
     const elRect = el.getBoundingClientRect();
@@ -157,7 +149,6 @@ export function initEyeOnIt(): void {
     });
   };
 
-  // textarea 입력되고 있는 위치 계산
   const textareaCalc = (el: HTMLElement, e: Event) => {
     const style = window.getComputedStyle(el);
     const elRect = el.getBoundingClientRect();
