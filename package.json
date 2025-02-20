@@ -1,0 +1,45 @@
+{
+  "name": "eye-on-it",
+  "version": "1.0.4",
+  "description": "A JavaScript library for tracking mouse movement and input focus.",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "style": "dist/style.css",
+  "types": "dist/index.d.ts",
+  "sideEffects": [
+    "*.css",
+    "dist/index.js",
+    "dist/index.mjs"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./style.css": {
+      "import": "./dist/style.css",
+      "require": "./dist/style.css",
+      "default": "./dist/style.css"
+    }
+  },
+  "type": "module",
+  "scripts": {
+    "build": "node build.js",
+    "test": "echo 'No tests yet'"
+  },
+  "keywords": [
+    "mouse",
+    "tracker",
+    "input",
+    "animation"
+  ],
+  "author": "Kelly",
+  "license": "MIT",
+  "devDependencies": {
+    "esbuild": "^0.25.0",
+    "typescript": "^5.7.3"
+  },
+  "unpkg": "dist/index.min.js"
+}

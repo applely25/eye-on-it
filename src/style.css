@@ -1,0 +1,31 @@
+.eye-layoutTrash {
+  position: absolute;
+  visibility: hidden;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+}
+.eye-hidden {
+  position: absolute;
+  visibility: hidden;
+}
+
+.eye-inputSpan {
+  white-space: pre;
+}
+.eye-textareaDiv {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.eye-pointParent {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.eye-point {
+  position: absolute;
+  transition: transform 0.1s linear;
+}
