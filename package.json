@@ -1,6 +1,6 @@
 {
   "name": "eye-on-it",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A JavaScript library for tracking mouse movement and input focus.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
