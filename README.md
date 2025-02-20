@@ -167,3 +167,16 @@ body {
   height: 300px;
 }
 ```
+
+---
+
+한국인을 위해 간단히 한글로 적어봅니다.
+
+- eye-point : 특정한 위치를 따라다니는 el
+- eye-container : 마우스 위치를 eye-point가 따라다니는 영역
+
+  - eye-input 또는 eye-textarea 가 focus된 상황이라면 eye-point가 따라오지 않음
+  - 단, always 키워드를 추가하는 경우 focus된 상황에서도 마우스가 움직이면 이를 쳐다봄
+
+- eye-input : input 창에 focus 된 상태에서 입력된 value의 마지막 부분을 eye-point가 쳐다봄
+- eye-textarea : eye-input 과 마찬가지로 textarea 창에 focus 된 상태에서 입력된 value의 마지막 부분을 eye-point 가 쳐다봄
